@@ -40,7 +40,7 @@ makeCacheMatrix<-function(x = matrix())
 
 #================================Start of cacheSolve()========================================
 #cacheSolve() function basically computes the inverse matrix of x 
-#if it is not computed aleady using the solve() function.
+#if it is not computed already using the solve() function.
 #Else if the inverse of matrix x has already been computed, cacheSolve() 
 #will return the inverted matrix without any computation.
 #x: Output of makeCacheMatrix() function.
@@ -60,9 +60,9 @@ cacheSolve <- function(x, ...)
               return(inverse)
           }
   
-  #If inverse is null, then the inverted matrix of x is obtained 
+  #If inverse is null, then the inverted matrix of x is computed 
   #by obtaining the original matrix (using x$get()) and followed by
-  #solve() function to compute the inverse matrix.
+  #solve() function to solve for the inverse matrix.
   #The inverted matrix is then stored in 'inverse' object in an environment 
   #that is different than current environment.
         data <- x$get()
